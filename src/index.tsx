@@ -14,10 +14,6 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 }
 
 render(
-	() => (
-		<Router root={App}>
-			{ router }
-		</Router>
-	),
+	() => <Router root={App}>{router}</Router>,
 	document.getElementById("root"),
 );

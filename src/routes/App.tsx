@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/solid-query";
-import { createSignal, ParentProps, type Component } from "solid-js";
+import { createSignal, type ParentProps, type Component } from "solid-js";
 import { SolidQueryDevtools } from "@tanstack/solid-query-devtools";
 import {
 	ColorModeProvider,
@@ -10,7 +10,7 @@ import { Navigation } from "@/components/nav/Navigation";
 
 const qc = new QueryClient();
 
-const App: Component = (props: ParentProps<{}>) => {
+const App: Component = (props: ParentProps) => {
 	console.log("App: ");
 	const storageManager = createLocalStorageManager("vite-ui-theme");
 
@@ -22,7 +22,6 @@ const App: Component = (props: ParentProps<{}>) => {
 					<Navigation />
 					{props.children}
 				</div>
-				
 			</ColorModeProvider>
 			<SolidQueryDevtools initialIsOpen={false} />
 		</QueryClientProvider>

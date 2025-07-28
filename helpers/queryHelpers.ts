@@ -1,13 +1,10 @@
-import { type Middleware } from "openapi-fetch";
+import type { Middleware } from "openapi-fetch";
 import type { SolidQueryOptions } from "@tanstack/solid-query";
 
 // biome-ignore lint: lint/suspicious/noExplicitAny
 type PromiseFn = (...args: any[]) => Promise<any>;
 
-type Opts<T> = Omit<
-	SolidQueryOptions<T>,
-	"queryFn" | "initialData"
->;
+type Opts<T> = Omit<SolidQueryOptions<T>, "queryFn" | "initialData">;
 type AwaitedFn<T extends PromiseFn> = Awaited<ReturnType<T>>;
 
 export const defaultMiddleware: Middleware = {
@@ -23,13 +20,13 @@ export const defaultMiddleware: Middleware = {
 
 // Necessary 'any'
 // biome-ignore lint: lint/suspicious/noExplicitAny
-const defaultOptions: Opts<any>  = {
+const defaultOptions: Opts<any> = {
 	retry: false,
 	retryOnMount: false,
 	refetchOnMount: (q) => !!q.state.error,
 	refetchOnWindowFocus: (q) => !!q.state.error,
 	staleTime: Number.POSITIVE_INFINITY,
-    queryKey: []
+	queryKey: [],
 };
 
 export const genQuery = <T extends PromiseFn>(
