@@ -1,0 +1,13 @@
+node_modules
+dist
+api/*
+api_output/*
+.vite*
+.env*
+
+# Local is fine
+!.env.local
+
+# Unignore a READMES
+!api/README.md
+!api_output/README.md
