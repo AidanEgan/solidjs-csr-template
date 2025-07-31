@@ -12,8 +12,8 @@
 		"build-api": "node --experimental-strip-types buildApi.ts",
 		"format": "pnpm biome format .",
 		"lint": "pnpm biome lint .",
-		"format:fix": "pnpm biome format --write .",
-		"lint:fix": "pnpm biome lint --write ."
+		"format:fix": "pnpm biome format --write --unsafe .",
+		"lint:fix": "pnpm biome lint --write --unsafe ."
 	},
 	"license": "MIT",
 	"devDependencies": {

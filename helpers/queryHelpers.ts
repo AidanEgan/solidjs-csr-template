@@ -1,5 +1,5 @@
-import type { Middleware } from "openapi-fetch";
 import type { SolidQueryOptions } from "@tanstack/solid-query";
+import type { Middleware } from "openapi-fetch";
 
 // biome-ignore lint: lint/suspicious/noExplicitAny
 type PromiseFn = (...args: any[]) => Promise<any>;

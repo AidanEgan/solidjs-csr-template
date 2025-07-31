@@ -1,11 +1,11 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/solid-query";
-import { createSignal, type ParentProps, type Component } from "solid-js";
-import { SolidQueryDevtools } from "@tanstack/solid-query-devtools";
 import {
 	ColorModeProvider,
 	ColorModeScript,
 	createLocalStorageManager,
 } from "@kobalte/core";
+import { QueryClient, QueryClientProvider } from "@tanstack/solid-query";
+import { SolidQueryDevtools } from "@tanstack/solid-query-devtools";
+import type { Component, ParentProps } from "solid-js";
 import { Navigation } from "@/components/nav/Navigation";
 
 const qc = new QueryClient();
