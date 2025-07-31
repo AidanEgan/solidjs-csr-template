@@ -1,8 +1,8 @@
-import { useRouter } from "@/hooks/useRouter";
-import { allRoutes } from "@/routes/routeconfig";
 import { For } from "solid-js";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "@/hooks/useRouter";
 import { zip } from "@/libs/utils";
+import { allRoutes } from "@/routes/routeconfig";
 import { ModeToggle } from "./DarkModeToggle";
 
 const routeNames = ["Home", "Button"];

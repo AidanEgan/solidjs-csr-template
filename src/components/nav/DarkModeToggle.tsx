@@ -1,9 +1,4 @@
 import { useColorMode } from "@kobalte/core";
-
-import { Sun } from "@/icons/Sun";
-import { Moon } from "@/icons/Moon";
-import { Computer } from "@/icons/Computer";
-
 import { Button } from "@/components/ui/button";
 import {
 	DropdownMenu,
@@ -11,6 +6,9 @@ import {
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Computer } from "@/icons/Computer";
+import { Moon } from "@/icons/Moon";
+import { Sun } from "@/icons/Sun";
 import { cn } from "@/libs/cn";
 
 export function ModeToggle(props: { class?: string }) {

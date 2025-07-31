@@ -1,5 +1,5 @@
-import { type Component, lazy } from "solid-js";
 import type { RouteDefinition } from "@solidjs/router";
+import { type Component, lazy } from "solid-js";
 import { Home } from "./Home";
 
 // INTERFACES

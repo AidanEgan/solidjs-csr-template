@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
 import { createSignal } from "solid-js";
+import { Button } from "@/components/ui/button";
 
 export const ButtonClicker = () => {
 	const [click, setClick] = createSignal(0);
