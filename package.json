@@ -7,7 +7,7 @@
 		"start": "vite",
 		"dev": "vite",
 		"build": "vite build",
-		"build:client": "vite build --outDir dist/client --ssrManifest",
+		"preview": "vite preview",
 		"check": "pnpm biome check .",
 		"check:fix": "pnpm biome check --write --unsafe .",
 		"serve": "vite preview",

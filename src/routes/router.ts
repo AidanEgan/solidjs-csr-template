@@ -1,6 +1,6 @@
 import type { RouteDefinition } from "@solidjs/router";
 import { type Component, lazy } from "solid-js";
-import { Home } from "./Home";
+import { Home } from "@/pages/Home";
 
 // INTERFACES
 
@@ -35,13 +35,16 @@ export const router: RouteDefinition[] = [
 	{
 		path: "/button",
 		component: namedLazy(
-			() => import("../routes/ButtonClicker"),
+			() => import("@/pages/ButtonClicker"),
 			"ButtonClicker",
 		),
 	},
+	{
+		path: "*404",
+		component: namedLazy(() => import("@/pages/NotFound"), "NotFound"),
+	},
 ];
 // Array with all routes from router above -> ideally this derived from router itself
-const routesArray = ["/", "/button"] as const;
-
-export type AllRoutes = (typeof routesArray)[number];
-export const allRoutes: AllRoutes[] = [...routesArray];
+export const allRoutes = ["/", "/button"] as const;
+export const routeNames = ["Home", "Button"] as const;
+export type AllRoutes = (typeof allRoutes)[number];

@@ -2,10 +2,9 @@ import { For } from "solid-js";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "@/hooks/useRouter";
 import { zip } from "@/libs/utils";
-import { allRoutes } from "@/routes/routeconfig";
+import { allRoutes, routeNames } from "@/routes/router";
 import { ModeToggle } from "./DarkModeToggle";
 
-const routeNames = ["Home", "Button"];
 export const Navigation = () => {
 	const navigate = useRouter();
 	return (

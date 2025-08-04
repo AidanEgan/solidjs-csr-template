@@ -1,2 +1,9 @@
-export const zip = <T, K>(a: T[], b: K[]): [T, K][] =>
-	a.map((k, i) => [k, b[i]]);
+export const zip = <T, K>(
+	a: ReadonlyArray<T>,
+	b: ReadonlyArray<K>,
+): [T, K][] => {
+	if (a.length <= b.length) {
+		return a.map((k, i) => [k, b[i]]);
+	}
+	return b.map((k, i) => [a[i], k]);
+};

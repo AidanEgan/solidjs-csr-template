@@ -11,7 +11,6 @@ import { Navigation } from "@/components/nav/Navigation";
 const qc = new QueryClient();
 
 const App: Component = (props: ParentProps) => {
-	console.log("App: ");
 	const storageManager = createLocalStorageManager("vite-ui-theme");
 
 	return (

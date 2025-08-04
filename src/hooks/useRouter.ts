@@ -1,5 +1,5 @@
 import { type NavigateOptions, useNavigate } from "@solidjs/router";
-import type { AllRoutes } from "@/routes/routeconfig";
+import type { AllRoutes } from "@/routes/router";
 
 // Wraps useNavigate utility, gives some type hints
 export const useRouter = () => {
