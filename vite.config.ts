@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import tailwindcss from "@tailwindcss/vite";
@@ -24,5 +25,15 @@ export default defineConfig({
 		alias: {
 			"@": resolve(__dirname, "./src"),
 		},
+	},
+	test: {
+		coverage: {
+			provider: "v8",
+			enabled: true,
+		},
+		watch: false,
+		environment: "happy-dom",
+		globals: true,
+		setupFiles: ["./vitest-setup.ts"],
 	},
 });
